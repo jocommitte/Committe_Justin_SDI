@@ -15,9 +15,11 @@ var final = money_round(hello);//final variable is calling the function money_ro
 
 var p = (side4 + side5 + final)/2;
 var p2 = Math.sqrt(p*(p-side4)*(p-side5)*(p-final));
-var finalArea = p2;
-
-
+console.log(p2);
+var finalArea = area_round(p2);
+function area_round(p2) {//this is my function money_round and I input the third side unrounded
+    return Math.ceil(p2 * 100) / 100;//function returns the highest decimal place of hello taken down to 2 decimals
+}
 
 function money_round(hello) {//this is my function money_round and I input the third side unrounded
     return Math.ceil(hello * 100) / 100;//function returns the highest decimal place of hello taken down to 2 decimals
