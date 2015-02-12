@@ -9,5 +9,5 @@ var side2 = prompt("Middle Side");
 var side3 = Math.pow(side1,2) + Math.pow(side2,2);
 var final = Math.sqrt(side3);
 alert(final);
-document.getElementById("p1").innerHTML = final + " is the length of your long side";
+document.getElementById("p1").innerHTML = "Congratulations "+ final + " is the length of your long side";
 
