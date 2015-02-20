@@ -13,23 +13,28 @@ var math = prompt("What grade did you get in Math Class?");
 if(math == ''){
     prompt("Please enter your grade for math.");
 }
-var history = prompt('What grade did you get in History Class?');
-if(history == ''){
-    prompt("Please enter a grade for history.");
+var english;
+english = prompt('What grade did you get in English Class?');
+if(english == ''){
+    prompt("Please enter a grade for english.");
 }
 var science = prompt("What grade did you get in Science Class?");
 if(science == ''){
     prompt("Please enter a grade for science.");
 }
-math = parseFloat(math);
-history = parseFloat(history);
-science = parseFloat(science);
-if (english < 90 && spanish < 90 && math <90 && history<90 && science <90){
+math = parseInt(math);
+english = parseInt(english);
+science = parseInt(science);
+var oneA;
+var average = math + english + science;
+if (math <90 && english<90 && science <90){
     oneA = false;
 }else{
     oneA = true;
 }
 passing = average >= 70 ? "you passed":"you failed";
 console.log(passing);
+
+
 
 
