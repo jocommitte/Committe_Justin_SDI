@@ -9,7 +9,7 @@
 //if he is passing and he has at least one A then he is eligible for AP Classes
 
 var name = prompt('What is your name?');//user input for name
-if(name == ''){
+if(name == ''){//validating that something is entered into the name category
     prompt("Please enter your name.");
 }
 var math = prompt("What grade did you get in Math Class?");//user input for math grade
@@ -40,14 +40,16 @@ if(passing == "you failed"){//if statement returning you failed if passing equal
         oneA = true;//means there is at least one a and oneA is true
     }
     if(oneA == true && passing == 'you passed'){//if there is one a and you've passed and are eligible for AP
-        console.log("Congratulations " + name + " ,You're Eligible for AP Classes!")
+        console.log("Congratulations " + name + ", You're Eligible for AP Classes!")
     }
-    else{// if you make it to this point then you've automatically passed but you are not eligible for AP classes.  
-        console.log("Good Job "+ name +" ,you passed, but you are not eligible for AP classes!")
+    else{// if you make it to this point then you've automatically passed but you are not eligible for AP classes.
+        console.log("Good Job "+ name +", you passed, but you are not eligible for AP classes!")
     }
 }
 
-
+// I used 0 for math, 0 for english, and 0 for science and got 'you failed'
+//I used 70 for math, 70 for english, and 70 for science and got "Good Job jo, you passed, but you are not eligible for AP classes!"
+//I used 70 for math, 55 for english, and 99 for science and got "Congratulations jo, You're Eligible for AP Classes!"
 
 
 
