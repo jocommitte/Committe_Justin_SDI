@@ -9,6 +9,9 @@
 //if he is passing and he has at least one A then he is eligible for AP Classes
 
 var name = prompt('What is your name?');//user input for name
+if(name == ''){
+    prompt("Please enter your name.");
+}
 var math = prompt("What grade did you get in Math Class?");//user input for math grade
 if(math == ''){//if statement validates for if the information was not inputted
     prompt("Please enter your grade for math.");
@@ -24,23 +27,22 @@ if(science == ''){//if input is empty string then write the input
 math = parseInt(math);//turning the three strings below into numbers
 english = parseInt(english);
 science = parseInt(science);
-var oneA;//initializing the oneA variable used to see if the user has atleast one a
-var avg = (math + english + science)/3;//getting
-console.log(avg);
-var passing;
-passing = avg >= 70 ? "you passed":"you failed";
-if(passing == "you failed"){
+var oneA;//initializing the oneA variable used to see if the user has at least one it's a boolean
+var avg = (math + english + science)/3;//getting the average of all the classes
+var passing;//initializing the passing variable used to tell if the average grade is 70 or above
+passing = avg >= 70 ? "you passed":"you failed";//ternary statement returning you passed if the average is above or equal to 70
+if(passing == "you failed"){//if statement returning you failed if passing equals you failed.
     console.log('You Failed');
-}else{
-    if (math <90 && english<90 && science <90){
-        oneA = false;
+}else{//if you did not fail then do the rest of the code
+    if (math <90 && english<90 && science <90){//if each individual grade is less than 90 then there are no A's
+        oneA = false;//means oneA is false and there are no A's
     }else{
-        oneA = true;
+        oneA = true;//means there is at least one a and oneA is true
     }
-    if(oneA == true && passing == 'you passed'){
-        console.log("Congratulations " + name + " ,You're Eligible for AP Classes")
+    if(oneA == true && passing == 'you passed'){//if there is one a and you've passed and are eligible for AP
+        console.log("Congratulations " + name + " ,You're Eligible for AP Classes!")
     }
-    else{
+    else{// if you make it to this point then you've automatically passed but you are not eligible for AP classes.  
         console.log("Good Job "+ name +" ,you passed, but you are not eligible for AP classes!")
     }
 }
