@@ -10,19 +10,19 @@
 
 var name = prompt('What is your name?');//user input for name
 if(name == ''){//validating that something is entered into the name category
-    prompt("Please enter your name.");
+    name = prompt("Please enter your name.");
 }
 var math = prompt("What grade did you get in Math Class?");//user input for math grade
 if(math == ''){//if statement validates for if the information was not inputted
-    prompt("Please enter your grade for math.");
+   math =  prompt("Please enter your grade for math.");
 }
 var english = prompt('What grade did you get in English Class?');//user input for English grade
 if(english == ''){//if there is an empty string then run this code
-    prompt("Please enter a grade for english.");//if no input then tells user to write the grade
+    english = prompt("Please enter a grade for english.");//if no input then tells user to write the grade
 }
 var science = prompt("What grade did you get in Science Class?");////user input for science class
 if(science == ''){//if input is empty string then write the input
-    prompt("Please enter a grade for science.");
+    science = prompt("Please enter a grade for science.");
 }
 math = parseInt(math);//turning the three strings below into numbers
 english = parseInt(english);
