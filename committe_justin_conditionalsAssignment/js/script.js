@@ -27,13 +27,24 @@ english = parseInt(english);
 science = parseInt(science);
 var oneA;
 var average = math + english + science;
-if (math <90 && english<90 && science <90){
-    oneA = false;
-}else{
-    oneA = true;
-}
 passing = average >= 70 ? "you passed":"you failed";
-console.log(passing);
+if(passing == "you failed"){
+    console.log('You Failed');
+}else{
+    if (math <90 && english<90 && science <90){
+        oneA = false;
+    }else{
+        oneA = true;
+    }
+    if(oneA == true && passing == 'you passed'){
+        console.log("Congratulations " + name + " ,You're Eligible for AP Classes")
+    }
+    else{
+        console.log("Good Job "+ name +" ,you passed, but you are not eligible for AP classes!")
+    }
+}
+
+
 
 
 
