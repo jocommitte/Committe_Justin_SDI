@@ -4,17 +4,27 @@ Justin Committe
  SDI Section1
  Functions Assignment
  */
-var kind = prompt('Please type a 1 for florida lottery and a 2 for powerball')
+var kind = prompt('Please type a 6 for florida lottery or a 5 for powerball');
+var amount;
+while(kind == ''){
+    kind= prompt('Please enter a 6 for florida lottery or a 5 for powerball');
+}
+if(kind == 5){
+    amount = 59
+}else{
+    amount = 53;
+}
 
-function lottery() {
+function lottery(kin,amt) {
     var balls = [];
-    for (var i=1; i<=6; i++) {
+    for (var i=1; i<=kin; i++) {
 
-        var lottery = Math.floor(Math.random() * 59);
+        var lottery = Math.floor(Math.random() * amt);
         balls.push(lottery)
-      return(balls);
 
 
     }
+    return(balls);
+
 }
-lottery();
+console.log(lottery(kind,amount));
