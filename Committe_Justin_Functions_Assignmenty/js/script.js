@@ -14,6 +14,13 @@ if(kind == 5){//if the number is 5 then it's powerball
 }else{//if not powerball number which is 5 then any other number will run this, but the only possible other option is 6
     amount = 53;//florida lottery is between 1 and 53
 }
+if(kind == 5){//this is how we do the right output.  using if kind = 5, which means it's a powerball number then
+    console.log("Here are your Powerball Lottery Numbers "+lottery(kind,amount)+" and here is your Powerball number: "+ powerBall()+" Yaaay!");//print out the answer and the powerball answer
+
+}else{//the only other else is 6 so this will run the Florida lottery numbers with no duplicates
+    console.log("Here are your Florida Lottery Numbers "+lottery(kind,amount));
+
+}
 function powerBall(){//my function powerball
     var pb = Math.floor(Math.random()*35);//use math.random times 35 to get a number between one and 35, math.floor is to round it to whole number
     return(pb);//returning this when the function is called
@@ -42,13 +49,7 @@ function lottery(kin,amt) {//my function lottery, with the parameters kin, and a
     }
 
     return balls;//return the array as the answer
-};
-if(kind == 5){//this is how we do the right output.  using if kind = 5, which means it's a powerball number then
-    console.log("Here are your Powerball Lottery Numbers "+lottery(kind,amount)+" and here is your Powerball number: "+ powerBall()+" Yaaay!");//print out the answer and the powerball answer
-
-}else{//the only other else is 6 so this will run the Florida lottery numbers with no duplicates
-    console.log("Here are your Florida Lottery Numbers "+lottery(kind,amount)+"!!");
-
 }
+
 
 
